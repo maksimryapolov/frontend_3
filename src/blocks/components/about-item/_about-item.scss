@@ -1,0 +1,108 @@
+$width: 40px;
+$border: 8px;
+
+.about-item {
+    font-family: 'BebasNeue-Regular';
+
+    &:not(:last-child) {
+        .about-item__position {
+            border-bottom: 1px solid $white;
+        }
+    }
+
+    &:first-child {
+        padding-top: 20px;
+    }
+
+    &:last-child {
+        padding-bottom: 40px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;      
+    }
+
+
+    &__left {
+        display: flex;
+        color: $white;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+
+        @media (max-width: $screem-sm-max) {
+            flex-basis: $about-for-bg-sm;
+        }
+
+        @media (min-width: $screen-md) {
+            flex-basis: $about-for-bg;
+        }
+
+        &::after {
+            content: '';
+            width: $width;
+            height: $width;
+            border-radius: 50%;
+            background-color: $white;
+            display: inline-block;
+            background-image: url('../img/svg/label.svg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: ($width) / -2;
+        }
+
+        &::before {
+            content: '';
+            width: $width;
+            height: $width;
+            display: inline-block;
+            position: absolute;
+            border: $border solid  transparentize($color: #ff3a00, $amount: .6);
+            border-radius: 50%;
+            right: ($width + $border * 2) / -2;
+        }
+    }
+
+    &__position {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+        padding: 30px 0;
+    }
+
+    &__title {
+        font-size: rem(30);
+    }
+
+    &__position-name {
+        text-align: right;
+    }
+
+    &__right {
+        @media (max-width: $screem-sm-max) {
+            flex-basis: 100% - $about-for-bg-sm;
+        }
+
+        @media (min-width: $screen-md) {
+            flex-basis: 100% - $about-for-bg;
+        }
+    }
+
+    &__right-wrapper {
+        @media (max-width: $screem-sm-max) {
+            padding-left: 33px;
+        }
+
+        @media (min-width: $screen-md) {
+            padding-left: 60px;
+        }
+
+        @media (max-width: $screen-sm) {
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+    }
+
+}

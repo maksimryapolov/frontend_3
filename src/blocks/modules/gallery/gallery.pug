@@ -1,0 +1,21 @@
+section.b-gallery
+    .b-gallery__row
+        .b-gallery__column
+            .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_1.jpg')"})
+        .b-gallery__column
+            .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_2.jpg')"})
+    .b-gallery__row
+        .b-gallery__column.b-gallery__column_size_s
+            .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_3.jpg')"})
+        .b-gallery__column.b-gallery__column_size_s.title
+            .b-gallery__item.title__body
+                +section-title("Our", "Portfolio", "Gallery")
+        .b-gallery__column.b-gallery__column_size_s
+            .b-gallery__row
+                .b-gallery__column.b-gallery__column_max_width
+                    .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_4.jpg')"})
+                    .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_5.jpg')"})
+        .b-gallery__column.b-gallery__column_size_s
+            .b-gallery__item(style={"background-image": "url('./img/gallery/gallery_6.jpg')"})
+
+    

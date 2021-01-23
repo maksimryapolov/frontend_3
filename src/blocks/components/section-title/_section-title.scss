@@ -1,0 +1,11 @@
+.section-title {
+    font-family: 'BebasNeue-Regular';
+    font-size: rem(87);
+    line-height: rem(80);
+    font-weight: 100;
+    color: $light-black;
+
+    &__sected {
+        color: $orange-base;
+    }
+}

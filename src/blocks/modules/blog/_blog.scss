@@ -1,0 +1,144 @@
+.b-blog {
+    font-family: 'BebasNeue-Regular';
+    padding: 85px 0;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        @media (max-width: $screem-lg-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__title-block {
+        flex-basis: 30%;
+
+        @media (max-width: $screem-lg-max) {
+            align-self: flex-start;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: $screen-xl) {
+            align-self: flex-end;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+
+    &__item-img,
+    &__big-banner {
+        position: relative;
+        display: flex;
+    }
+
+    &__item-img {
+        img {
+            width: 257px;
+            height: 181px;
+        }
+
+        @media (max-width: $screem-lg-max) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+            &:last-child {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (min-width: $screen-xl) {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__big-banner {
+        img {
+            width: 257px;
+            height: 598px;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        z-index: 5;
+
+        @media (max-width: $screem-lg-max) {
+            transform: translateX(100%);
+            top: 13px;
+            left: 50%;
+        }
+
+        @media (min-width: $screen-xl) {
+            bottom: 18px;
+            left: 18px;
+        }
+    }
+
+    &__big-banner {
+        position: relative;
+        flex-basis: 20%;
+
+        .b-blog__label {
+            top: 13px;
+            left: 50%;
+            transform: translateX(100%);
+        }
+
+        .b-blog__desc-block {
+            position: absolute;
+            bottom: 0;
+        }
+
+        @media (max-width: $screem-lg-max) {
+            justify-content: center;
+
+            .b-blog__desc-block {
+                width: 257px;
+            }
+        }
+    }
+
+    &__desc-block {
+        @media (max-width: $screem-lg-max) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-left: 25px;
+            padding-right: 50px;
+        }
+    }
+
+    &__title {
+        font-size: rem(20);
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $light-black;
+
+        &_white {
+            color: $white;
+        }
+    }
+
+    &__desc {
+        font-family: 'Open Sans';
+        font-size: rem(12);
+        line-height: rem(20);
+        font-weight: 400;
+        color: $gray;
+
+        &_white {
+            color: $white;
+        }
+    }
+}

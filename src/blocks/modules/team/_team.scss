@@ -1,0 +1,96 @@
+.b-team {
+    background-color: $bg-color;
+    font-family: 'BebasNeue-Regular';
+    padding: 82px 0 84px 0;
+
+    &__body {
+        display: flex;
+        padding: 0 20px;
+        
+        @media (max-width: $screem-lg-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        flex-basis: 30%;
+
+        @media (max-width: $screem-lg-max) {
+            align-self: flex-start;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: $screen-xl) {
+            align-self: flex-end;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-basis: 70%;
+
+        @media (max-width: $screem-md-max) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width: $screen-lg) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 258px;
+
+        img {
+            max-width: 257px;
+            max-height: 407px;
+        }
+
+        @media (max-width: $screem-md-max) {
+            margin-top: 25px;
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: rem(39);
+        line-height: rem(30);
+        text-transform: uppercase;
+        color: $light-black;
+
+        @media (max-width: $screem-lg-max) {
+            margin-top: 30px;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-top: 55px;
+        }
+    }
+    
+    &__position {
+        font-size: rem(25);
+        text-transform: uppercase;
+        color: $orange-base;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        font-family: 'Open Sans';
+        font-size: rem(16);
+        font-weight: 400;
+        color: $gray2;
+    }
+
+}

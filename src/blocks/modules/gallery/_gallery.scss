@@ -1,0 +1,48 @@
+.b-gallery {
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+
+        @media (max-width: $screem-sm-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        flex-basis: 50%;
+        height: 265px;
+        
+        &_size_s {
+            flex-basis: 25%;
+            height: 529px;
+        }
+
+        &_max_width {
+            flex-basis: 100%;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .title {
+        @media (max-width:$screem-sm-max)  {
+            height: 100%;
+            padding: 20px 0;
+        }
+    }
+
+    &__item.title__body {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: rem(40);
+    }
+}

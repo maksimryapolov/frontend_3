@@ -1,0 +1,135 @@
+.b-package {
+    background-color: $bg-color;
+    font-family: 'BebasNeue-Regular';
+    padding: 84px 0;
+
+    &__body {
+        display: flex;
+        padding: 0 20px;
+
+        @media (max-width: $screem-md-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: $screem-sm-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        padding: 50px 0 25px 0;
+        background-color: $white;
+        flex-basis: 260px;
+
+        &:not(:last-child) {
+
+            @media (max-width: $screem-sm-max) {
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: $screen-md) {
+                margin-right: 23px;
+                
+            }
+        }
+
+        svg {
+            width: 89px;
+            height: 89px;
+        }
+    }
+
+    &__item-top,
+    &__item-bottom {
+        text-align: center;
+
+        @media (max-width: $screem-sm-max) {
+            flex: 0 1 50%;
+        }
+
+        @media (min-width: $screen-md) {
+            flex: 0 1 100%;
+        }
+    }
+    
+
+    &__body-item {
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        flex-wrap: wrap;
+
+
+        @media (max-width: $screen-md) {
+            flex-direction: row;
+        }
+
+        @media (max-width: $screem-sm-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__title-section {
+        @media (max-width: $screem-md-max) {
+            align-self: flex-start;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: $screen-lg) {
+            align-self: flex-end;
+        }
+    }
+
+    &__title {
+        font-size: rem(39);
+        text-transform: uppercase;
+        color: $light-black;
+        margin-top: 40px;
+    }
+
+    &__position {
+        font-size: rem(25);
+        text-transform: uppercase;
+        color: $orange-base;
+        margin-bottom: 40px;
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: rem(16);
+        line-height: rem(24);
+        font-family: 'Open Sans';        
+        color: $gray2;
+        // padding: 0 25px;
+        margin-bottom: 35px;
+    }
+
+    &__price {
+        font-size: rem(71);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $light-black;
+        margin-bottom: 25px;
+
+        &_orange {
+            color: $orange-base;
+        }
+    }
+
+    &__btn {
+        button {
+            border: none;
+            background-color: $orange-base;
+            color: $white;
+            padding: 15px 40px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 0;
+        }
+    }
+}

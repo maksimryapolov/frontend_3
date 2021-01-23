@@ -1,0 +1,12 @@
+.b-footer {
+    font-family: 'Open Sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $bg-color;
+    color: $gray2;
+    font-size: rem(14);
+    line-height: rem(20);
+    padding: 65px 20px;
+}
