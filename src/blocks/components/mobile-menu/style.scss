@@ -1,0 +1,112 @@
+// Для мобильности передача данных
+//   - Breakpoint
+//   - Цвет меню
+//   - Убрать margin (Лучше убрать margin и делать обертку для бургера в компонентах)
+
+// == VAR ==
+$base: 4px;
+
+$mobileTextWhite: #fff; 
+$burgerColor: #fff;
+// == / VAR ==
+
+.burger {
+    position: relative;
+    width: $base * 7;
+    height: $base * 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 15;
+
+    &__item {
+        border: 2px solid $burgerColor;
+        border-radius: $base * 4;
+        transition-property: transform, opacity;
+        transition-duration: .1s;
+        width: 100%;
+        background-color: $burgerColor;
+    }
+
+    &-active {
+        .burger__item {
+            &_top {
+                transform: translateY(10.5px) rotate(50deg);
+            }
+
+            &_middle {
+                opacity: 0;
+            }
+
+            &__bottom {
+                transform: translateY(-10.5px) rotate(-50deg);
+            }
+        }
+    }
+
+    @media (max-width: $screem-sm-max) {
+        display: flex;
+    }
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+}
+
+.b-mobile-menu {
+    &__items {
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: transform .3s ease;
+        font-size: rem(20);
+    }
+
+    &__item {
+        opacity: 0;
+        margin-left: 50px;
+
+        & + & {
+            margin-top: $base * 9;
+        }
+    }
+
+    &__link {
+        color: $light-black;
+        text-decoration: none;
+    }
+
+    &.open {
+        .b-mobile-menu__items {
+            padding: $base * 9 0;
+            background-color: $black;
+            background-color: $mobileTextWhite;
+            color: $mobileTextWhite;
+            z-index: 10;
+            transform: translateX(0%);
+            transition: transform .3s ease;
+        }
+
+        .b-mobile-menu__wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .b-mobile-menu__item {
+            opacity: 1;
+        }
+    }
+}
+
+.mobile-open {
+    overflow-y: hidden;
+}

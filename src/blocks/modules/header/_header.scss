@@ -68,6 +68,10 @@
         letter-spacing: rem(2.6);
     }
 
+    &__burger-wrapper {
+        margin-left: auto;
+    }
+
     &__menu {
         margin: 0;
         padding: 0;
@@ -129,7 +133,6 @@
         
         @media (min-width: $screen-md) {
             font-size: rem(80);
-
         }
     }
 
